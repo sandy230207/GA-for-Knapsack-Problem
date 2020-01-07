@@ -171,7 +171,7 @@ def plotChart(lgbk, NGEN):
     plt.subplot(2, 1, 1)
     plt.title('Fitness')
     plt.ylabel('weight')
-    plt.plot(x, y, 'o', color='blue');
+    plt.plot(x, y, '-o', color='blue');
     plt.savefig(DJANGO_PATH+'image.png')
     
     x1 = [n for n in range(0, NGEN+1)]
@@ -180,7 +180,7 @@ def plotChart(lgbk, NGEN):
     plt.subplot(2, 1, 2)
     plt.xlabel('generation')
     plt.ylabel('value')
-    plt.plot(x1, y1, 'o', color='blue');
+    plt.plot(x1, y1, '-o', color='blue');
     plt.savefig(DJANGO_PATH+'image.png')
     plt.clf()
     plt.cla()
