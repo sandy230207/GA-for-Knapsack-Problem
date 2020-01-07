@@ -261,6 +261,7 @@ def main(NGEN,MU,LAMBDA,CXPB,MUTPB):
     result=[]
     result.append(hof[-1])
     result.append(evalKnapsack(hof[-1]))
+    result.append(logbook)
     
     return result
 

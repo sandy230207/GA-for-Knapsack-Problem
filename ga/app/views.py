@@ -12,6 +12,7 @@ def index(request):
         LAMBDA = 100
         CXPB = 0.7
         MUTPB = 0.2
+        
         # retrieve input
         if request.method == 'POST':
             NGEN = int(request.POST['NGEN'])
@@ -25,6 +26,7 @@ def index(request):
 
         r1=ks[0]
         r2=ks[1]
+        r3=ks[2]
     
         return render(request, "index.html", locals())
     
