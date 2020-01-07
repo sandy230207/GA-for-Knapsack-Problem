@@ -6,19 +6,19 @@
 {% csrf_token %}
 <table align="center">
 <tr align="center">
-  <td align="left">NGEN: </td><td><input type="text" name="NGEN"></td><td align="left"> (The number of generation)</td>
+  <td align="left">NGEN: </td><td><input type="text" name="NGEN"></td><td align="left"> (The number of generation. Default=50.)</td>
 </tr>
 <tr align="center">
-  <td align="left">MU: </td><td><input type="text" name="MU"></td><td align="left"> (The number of individuals to select for the next generation)</td>
+  <td align="left">MU: </td><td><input type="text" name="MU"></td><td align="left"> (The number of individuals to select for the next generation. Default=50.)</td>
 </tr>
 <tr align="center">
-  <td align="left">LAMBDA: </td><td><input type="text" name="LAMBDA"></td><td align="left"> (The number of children to produce at each generation)</td>
+  <td align="left">LAMBDA: </td><td><input type="text" name="LAMBDA"></td><td align="left"> (The number of children to produce at each generation. Default=100.)</td>
 </tr>
 <tr align="center">
-  <td align="left">CXPB: </td><td><input type="text" name="CXPB"></td><td align="left"> (The probability that an offspring is produced by crossover)</td>
+  <td align="left">CXPB: </td><td><input type="text" name="CXPB"></td><td align="left"> (The probability that an offspring is produced by crossover. Default=0.7.)</td>
 </tr>
 <tr align="center">
-  <td align="left">MUTPB: </td><td><input type="text" name="MUTPB"></td><td align="left"> (The probability that an offspring is produced by mutation)</td>
+  <td align="left">MUTPB: </td><td><input type="text" name="MUTPB"></td><td align="left"> (The probability that an offspring is produced by mutation. Default=0.2.)</td>
 </tr>
 <tr align="center">
   <td colspan=3><input type="submit" value="Submit"></td>
@@ -33,7 +33,13 @@
 
 <table>
 <tr align="center">
-  <td colspan=2>{{r3}}</td>
+  <td colspan=2>&nbsp;</td>
+</tr>
+<tr align="center">
+  <td colspan=2><pre>{{r3}}</pre></td>
+</tr>
+<tr align="center">
+  <td colspan=2>&nbsp;</td>
 </tr>
 <tr align="center">
   <td colspan=2><h4>Best Permutation of Bags</h4></td>

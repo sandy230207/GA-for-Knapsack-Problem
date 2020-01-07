@@ -15,11 +15,18 @@ def index(request):
         
         # retrieve input
         if request.method == 'POST':
-            NGEN = int(request.POST['NGEN'])
-            MU = int(request.POST['MU'])
-            LAMBDA = int(request.POST['LAMBDA'])
-            CXPB = float(request.POST['CXPB'])
-            MUTPB = float(request.POST['MUTPB'])
+            try:
+                NGEN = int(request.POST['NGEN'])
+                MU = int(request.POST['MU'])
+                LAMBDA = int(request.POST['LAMBDA'])
+                CXPB = float(request.POST['CXPB'])
+                MUTPB = float(request.POST['MUTPB'])
+            except:
+                NGEN = 50
+                MU = 50
+                LAMBDA = 100
+                CXPB = 0.7
+                MUTPB = 0.2
             
         # call function and retrieve return value from knapsack.main
         ks=knapsack.main(NGEN,MU,LAMBDA,CXPB,MUTPB)
@@ -27,6 +34,7 @@ def index(request):
         r1=ks[0]
         r2=ks[1]
         r3=ks[2]
+        print(r3)
     
         return render(request, "index.html", locals())
     
