@@ -242,8 +242,7 @@ def main(NGEN,MU,LAMBDA,CXPB,MUTPB):
     #圖表-適應函數
     plotChart(logbook,NGEN)
     
-    #圖表-每個世代 Individual 的 Fitness 值
-    
+    #圖表-每個世代 Individual 的 Fitness 值    
     for gen in range(1, NGEN+1):
         scatterChart(genlog, 'invalid_ind', gen)
     
