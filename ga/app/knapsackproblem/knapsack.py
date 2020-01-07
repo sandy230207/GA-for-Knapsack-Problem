@@ -223,6 +223,9 @@ def genGIF(folder):
             file_path = os.path.join(DJANGO_PATH+folder, file_name)
             images.append(imageio.imread(file_path))
     imageio.mimsave(gifname, images, fps=3)
+    for file_name in os.listdir(DJANGO_PATH+folder):
+        if file_name.endswith('.png'):
+            os.remove(os.path.join(DJANGO_PATH+folder, file_name))
 
 def main(NGEN,MU,LAMBDA,CXPB,MUTPB):
     print("path:", os.getcwd())
