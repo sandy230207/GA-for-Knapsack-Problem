@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<title>GA - for Knapsack Problem</title>
+<body>
+<form method="POST" align="center">
+{% csrf_token %}
+<table align="center">
+<tr align="center">
+  <td align="left">NGEN: </td><td><input type="text" name="NGEN"></td><td align="left"> (The number of generation)</td>
+</tr>
+<tr align="center">
+  <td align="left">MU: </td><td><input type="text" name="MU"></td><td align="left"> (The number of individuals to select for the next generation)</td>
+</tr>
+<tr align="center">
+  <td align="left">LAMBDA: </td><td><input type="text" name="LAMBDA"></td><td align="left"> (The number of children to produce at each generation)</td>
+</tr>
+<tr align="center">
+  <td align="left">CXPB: </td><td><input type="text" name="CXPB"></td><td align="left"> (The probability that an offspring is produced by crossover)</td>
+</tr>
+<tr align="center">
+  <td align="left">MUTPB: </td><td><input type="text" name="MUTPB"></td><td align="left"> (The probability that an offspring is produced by mutation)</td>
+</tr>
+<tr align="center">
+  <td colspan=3><input type="submit" value="Submit"></td>
+</tr>
+<!--
+<tr>
+  <td colspan=2><span style="color:red">{{message}}</span></td>
+</tr>
+-->
+</table>
+</form>
+
+<table>
+<tr align="center">
+  <td colspan=2><h4>Best permutation of bags</h4></td>
+</tr>
+<tr align="center">
+  <td colspan=2>{{r1}}</td>
+</tr>
+<tr align="center">
+  <td colspan=2>&nbsp;</td>
+</tr>
+<tr align="center">
+  <td colspan=2><h4>Best Fitness</h4></td>
+</tr>
+<tr align="center">
+  <td colspan=2>{{r2}}</td>
+</tr>
+<tr align="center">
+  <td colspan=2>&nbsp;</td>
+</tr>
+<tr align="center">
+  <td colspan=2><img src="static/image.png" alt="Individual Fitness"></td>
+</tr>
+<tr align="center">
+  <td><img src="static/individual.gif" alt="Individual Fitness"></td>
+  <td><img src="static/population.gif" alt="Population Fitness"></td>
+</tr>
+</table>
+<br>
+</body>
+</html>
