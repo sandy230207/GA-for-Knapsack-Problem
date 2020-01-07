@@ -6,11 +6,13 @@ from app.knapsackproblem import knapsack
 
 def index(request):
     try:
+        # set the default value
         NGEN = 50
         MU = 50
         LAMBDA = 100
         CXPB = 0.7
         MUTPB = 0.2
+        # retrieve input
         if request.method == 'POST':
             NGEN = int(request.POST['NGEN'])
             MU = int(request.POST['MU'])
@@ -18,7 +20,9 @@ def index(request):
             CXPB = float(request.POST['CXPB'])
             MUTPB = float(request.POST['MUTPB'])
             
+        # call function and retrieve return value from knapsack.main
         ks=knapsack.main(NGEN,MU,LAMBDA,CXPB,MUTPB)
+
         r1=ks[0]
         r2=ks[1]
     
